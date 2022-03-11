@@ -1,9 +1,16 @@
-import Fun from "./Fun"
+import React from 'react';
+import Header from "./component/Header";
+import Content from './component/Content';
+import "./App.css";
 
-export default function App() {
-  return (
-    <div className="App">
-      <Fun />
-    </div>
-  );
+
+const App = () => {
+    return (
+        <div>
+
+            <Header />
+            <Content />
+        </div>
+    )
 }
+export default App;

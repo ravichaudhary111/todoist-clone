@@ -1,38 +1,150 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@300;400;500&display=swap');
+html {
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(248, 246, 242);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.header {
+    border-bottom: solid 1px rgb(202, 20, 20);
+    background-color: rgb(202, 20, 20);
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.15);
+    height: 44px;
+    width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+
+/* .header nav {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin: auto;
+} */
+
+.header img {
+    height: 44px;
+    width: 15%;
+    background-color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.content {
+    display: flex;
+    max-width: 992px;
+    margin: auto;
+    background-color: rgb(255, 255, 255);
+}
+
+.sidebar {
+    user-select: none;
+    width: 30%;
+    height: 100vh;
+    padding-top: 75px;
+    border: 1px solid rgb(251, 252, 251);
+    background-color: rgb(255, 255, 255);
+}
+
+.add-task-dialog {
+    margin-top: 12px;
+}
+
+.add-task-dialog input {
+    width: 100%;
+    border: 1px solid rgb(203, 199, 199);
+    background-color: white;
+    height: 35px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.sidebar div {
+    margin-bottom: 15px;
+    cursor: pointer;
+    padding: 15px;
+}
+
+.sidebar div.active {
+    background-color: rgb(233, 230, 230);
+}
+
+.sidebar div .icon {
+    margin-right: 10px;
+}
+
+.task {
+    background-color: rgb(255, 255, 255);
+    height: 100vh;
+    width: 70%;
+    padding: 80px 20px 0;
+}
+
+.add-task-btn {
+    cursor: pointer;
+}
+
+.add-task-btn .plus {
+    color: rgb(202, 20, 20);
+    font-size: 20px;
+}
+
+.add-task-text {
+    color: rgb(129, 136, 140);
+    font-size: 15px;
+    margin-left: 15px;
+}
+
+.add-task-action-container {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.add-btn {
+    background-color: rgb(202, 20, 20);
+    color: white;
+    border: 1px solid transparent;
+    margin-right: 5px;
+    font-weight: bold;
+    padding: 6px 12px 7px 13px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.add-btn:disabled {
+    background-color: gray;
+}
+
+.add-btn:active {
+    transform: scale(0.9);
+}
+
+.cancel-btn {
+    all: unset;
+    color: rgb(72, 75, 76);
+    cursor: pointer;
+    font-size: 14px;
+    margin: 0px 5px;
+}
+.task-items-container{
+    margin-top: 40px;
+    padding: 0 20px;
+}
+.task-item{
+    display: flex;
+    justify-content: space-between;
+    padding:10px;
+}
+.task-item:not(:last-child){
+    border-bottom: 2px solid rgb(202, 20, 20);
 }
